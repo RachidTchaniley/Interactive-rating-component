@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  <link href="style.css" rel="stylesheet">
+  <link href="https://fonts.google.com/specimen/Overpass" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Rating state start -->
+  <main>
+<section class="front">
+  <img src="images/icon-star.svg" alt="icone-star">
+  <h1>How did we do?</h1>
+  <p id="fp">Please let us know how we did with yoursupport<br> request. All feedback is appreciated 
+    to help us<br> improve our offering!</p>
+  <di class="ratings">
+    <button class="selection" data-id="1">1</button>
+    <button class="selection" data-id="2">2</button>
+    <button class="selection" data-id="3">3</button>
+    <button class="selection" data-id="4">4</button>
+    <button class="selection" data-id="5">5</button>
+  </di>
+  <button class="submit">Submit</button>
+</section>
+
+  <!-- Rating state end -->
+
+  <!-- Thank you state start -->
+
+  <section class="back">
+
+  
+  <img src="images/illustration-thank-you.svg">
+  <p id="selected">You Selected <span class="number">0</span> out of 5</p>
+  <h1>Thank you!</h1>
+  <div id="sp">
+  <p>We appreciate you taking the time to give a rating.<p>If you ever need more support, 
+    don’t hesitate</p><p>to get in touch!</p>
+  </div>
+  </section>
+  <!-- Thank you state end -->
+</main>
+
+<footer>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+</footer>
+  
+<script src="script.js"></script>
+</body>
+</html>

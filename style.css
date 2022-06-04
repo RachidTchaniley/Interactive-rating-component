@@ -1,0 +1,197 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Overpass', sans-serif;
+    background-color: var(--bodyBack);
+}
+
+:root{
+    --h1White: hsl(0, 0%, 100%);
+    --lightGr: hsl(217, 12%, 63%);
+    --darkGr: hsl(216, 12%, 54%);
+    --buttonBack: hsl(25, 97%, 53%);
+    --bodyBack: hsl(216, 12%, 8%);
+    --boxesBack: hsl(213, 19%, 18%);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+main{
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 20px;
+    background-color: var(--boxesBack);
+    
+}
+main .front{
+    animation: fade 2s linear;
+}
+
+@keyframes fade{
+    0%{
+        opacity: .05;
+    }
+
+}
+
+body.active .front{
+    display: none;
+}
+
+
+.front img{
+    width: 17px;
+    height: 16px;
+    border-radius: 50%;
+
+}
+
+.front{
+    width: 100%;
+    height: 400px;
+    background-color: var(--boxesBack);
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    justify-content: space-around;
+   
+}
+
+
+
+h1,.submit{
+    color: var(--h1White);
+}
+
+h1, p, .ratings{
+    background-color: transparent;
+}
+
+p, .selection{
+    color: var(--darkGr);
+}
+
+.front .submit{
+    background-color: var(--buttonBack);
+    height: 40px;
+    width: 100%;
+}
+
+.back{ 
+    background-color: transparent;
+    height: 400px;
+    width: 400px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    z-index: -1;
+    transform: translateX(-30px);
+    transition: all 1s linear;
+    opacity: 0;
+
+}
+
+body.active .back{
+    z-index: 1;
+    transform: translateX(0px);
+    overflow: auto;
+    opacity: 1;
+}
+
+.back #selected{
+    background-color:  hsl(210, 6%, 21%);
+    color: var(--buttonBack);
+    border-radius: 20px;
+    padding: 8px;
+}
+
+img{
+    background-color: transparent;
+    width: 162px;
+    height: 108px;
+}
+
+.submit{
+    border-radius: 20px;
+    border: none;
+    transition: all 400ms ease-in
+}
+.submit:hover{
+    cursor: pointer;
+    background-color: white;
+    color: var(--buttonBack);
+}
+
+.ratings{
+    display: flex;
+    justify-content: space-between;
+}
+
+.selection{
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--darkGr);
+    color: var(--lightGr);
+    transition: all 400ms ease-in;
+}
+
+.selection:hover{
+    background-color: var(--buttonBack);
+    color: var(--h1White);
+    cursor: pointer;   
+}
+
+footer{
+    transform: translateY(50px);
+}
+
+#fp{
+    line-height: 30px;
+}
+
+#ap{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+span{
+    background-color: transparent;
+}
+
+#sp{
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 30px;
+}
+
+.ratings button:focus-within{
+    color: var(--h1White);
+    background-color: hsl(210, 6%, 21%);
+    border: 3px solid orange;
+}
+
+
+
